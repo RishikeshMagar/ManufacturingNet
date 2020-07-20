@@ -18,8 +18,6 @@ Current capabilities of the project include:
 .. toctree::
    :maxdepth: 2
 
-   :caption: Contents:
-
 Table of contents
 ==================
 
