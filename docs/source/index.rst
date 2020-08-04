@@ -3,11 +3,12 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
+********************************************
 Welcome to ManufacturingNet's documentation!
-============================================
+********************************************
 
 About the Project
-^^^^^^^^^^^^^^^^^
+=================
 ManufacturingNet provides a sustainable, open-source ecosystem of modern artificial intelligence tools for tackling
 diverse engineering challenges.
 ManufacturingNet is developed and maintained by the Mechanical and Artificial Intelligence (MAIL) Lab at Carnegie

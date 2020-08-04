@@ -1,5 +1,6 @@
+************************
 Shallow Learning Methods
-========================
+************************
 
 ManufacturingNet provides several shallow machine learning algorithms for performing supervised regression and
 classification on your data.
@@ -10,24 +11,24 @@ check out our deep learning methods!
 
 Shallow learning methods typically follow the below pattern:
 
-* Split the dataset into a training and testing set
-* Generate weights for the features by learning from the training set (this creates the model)
-* Run the model against the testing set to determine its accuracy
+- Split the dataset into a training and testing set
+- Generate weights for the features by learning from the training set (this creates the model)
+- Run the model against the testing set to determine its accuracy
 
 At this point, it is your responsibility to either accept the model, tweak its parameters for better accuracy, or try a
 different learning method altogether. Don't worry; our shallow learning library makes this easy.
 
 Classification vs. Regression
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+=============================
 
 Many shallow learning methods support both classification and regression analysis.
 
 In a classification model, the features of a datapoint are weighted to predict one or several categories it falls into.
 For example, using the characteristics of a tumor to predict if it is benign or malignant is a classification problem.
 
-* In binary classification, datapoints are classified into one of two categories.
-* In multiclass classification, datapoints are classified into three or more categories.
-* In multi-label classification, datapoints can be classified into several categories.
+- In binary classification, datapoints are classified into one of two categories.
+- In multiclass classification, datapoints are classified into three or more categories.
+- In multi-label classification, datapoints can be classified into several categories.
 
 Confusingly, multi-label classification is not the same as multiclass classification; try not to mix these up!
 
@@ -42,25 +43,24 @@ As a general rule, if your dataset's dependent variables are **not continuous**,
 example, if your dependent variables are strings or numerical categories, use a classification model.
 
 Classification Methods
-^^^^^^^^^^^^^^^^^^^^^^
+======================
 
     .. toctree::
             :maxdepth: 2
 
             Logistic Regression <shallow_learning_methods/logistic_regression>
-            Multi-Layer Perceptron <shallow_learning_methods/mlp>
             Random Forest <shallow_learning_methods/random_forest>
             Support Vector Machine <shallow_learning_methods/svm>
             XGBoost <shallow_learning_methods/xgb>
 
 Regression Methods
-^^^^^^^^^^^^^^^^^^
+==================
 
     .. toctree::
-        :maxdepth: 2
+            :maxdepth: 2
 
-        Linear Regression <shallow_learning_methods/linear_regression>
-        Logistic Regression <shallow_learning_methods/logistic_regression>
-        Random Forest <shallow_learning_methods/random_forest>
-        Support Vector Machine <shallow_learning_methods/svm>
-        XGBoost <shallow_learning_methods/xgb>
+            Linear Regression <shallow_learning_methods/linear_regression>
+            Logistic Regression <shallow_learning_methods/logistic_regression>
+            Random Forest <shallow_learning_methods/random_forest>
+            Support Vector Machine <shallow_learning_methods/svm>
+            XGBoost <shallow_learning_methods/xgb>
