@@ -46,7 +46,7 @@ Classification Methods
 ======================
 
     .. toctree::
-            :maxdepth: 2
+            :maxdepth: 1
 
             Logistic Regression <shallow_learning_methods/logistic_regression>
             Random Forest <shallow_learning_methods/random_forest>
@@ -57,7 +57,7 @@ Regression Methods
 ==================
 
     .. toctree::
-            :maxdepth: 2
+            :maxdepth: 1
 
             Linear Regression <shallow_learning_methods/linear_regression>
             Logistic Regression <shallow_learning_methods/logistic_regression>
