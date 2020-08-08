@@ -160,6 +160,8 @@ Regressor Accessor Methods
 - **get_r2_score()**: Returns r2_score.
 - **get_cross_val_scores_regressor()**: Returns get_cross_val_scores_regressor.
 
+Note: If run_regressor() hasn't successfully executed yet, the above accessor methods will return None.
+
 Regressor Example Usage
 -----------------------
 
