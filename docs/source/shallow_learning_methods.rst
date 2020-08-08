@@ -52,6 +52,7 @@ Classification Methods
             Random Forest <shallow_learning_methods/random_forest>
             Support Vector Machine <shallow_learning_methods/svm>
             XGBoost <shallow_learning_methods/xgb>
+            Running All Classification Models <shallow_learning_methods/all_classification_models>
 
 Regression Methods
 ==================
@@ -64,3 +65,4 @@ Regression Methods
             Random Forest <shallow_learning_methods/random_forest>
             Support Vector Machine <shallow_learning_methods/svm>
             XGBoost <shallow_learning_methods/xgb>
+            Running All Regression Models <shallow_learning_methods/all_regression_models>
