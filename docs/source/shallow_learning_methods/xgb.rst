@@ -10,6 +10,12 @@ ManufacturingNet's XGBoost functionality is provided through the **XGBoost** cla
 
 *XGBoost(attributes=None, labels=None)*
 
+Go To
+=====
+
+    - :ref:`class`
+    - :ref:`reg`
+
 Universal Parameters
 ====================
 
@@ -61,6 +67,8 @@ Modifier Methods
 - **set_labels(new_labels=None)**: Sets labels to new_labels. If new_labels isn't specified, labels is set to None.
 
 --------------
+
+.. _class:
 
 Classification
 ==============
@@ -122,6 +130,8 @@ Classifier Example Usage
     classifications = xgb_model.predict_classifier(new_data_X) # This will return and output classifications for new_data_X
 
 ----------
+
+.. _reg:
 
 Regression
 ==========

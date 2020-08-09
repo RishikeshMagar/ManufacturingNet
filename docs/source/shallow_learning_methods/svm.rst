@@ -17,6 +17,16 @@ ManufacturingNet's SVM functionality is provided through the **SVM** class.
 
 *SVM(attributes=None, labels=None)*
 
+Go To
+=====
+
+    - :ref:`SVC`
+    - :ref:`nu-SVC`
+    - :ref:`linear-SVC`
+    - :ref:`SVR`
+    - :ref:`nu-SVR`
+    - :ref:`linear-SVR`
+
 Universal Parameters
 ====================
 
@@ -52,6 +62,11 @@ Modifier Methods
 
 Classification
 ==============
+
+.. _SVC:
+
+SVC
+===
 
 SVC Parameters
 --------------
@@ -100,6 +115,11 @@ SVC Accessor Methods
 
 Note: If run_SVC() hasn't successfully executed yet, the above accessor methods will return None.
 
+.. _nu-SVC:
+
+NuSVC
+=====
+
 NuSVC Parameters
 ----------------
 
@@ -146,6 +166,11 @@ NuSVC Accessor Methods
 - **get_cross_val_scores_nu_SVC()**: Returns cross_val_scores_nu_SVC.
 
 Note: If run_nu_SVC() hasn't successfully executed yet, the above accessor methods will return None.
+
+.. _linear-SVC:
+
+LinearSVC
+=========
 
 LinearSVC Parameters
 --------------------
@@ -222,6 +247,11 @@ Classification Example Usage
 Regression
 ==========
 
+.. _SVR:
+
+SVR
+===
+
 SVR Parameters
 --------------
 
@@ -267,6 +297,11 @@ SVR Accessor Methods
 
 Note: If run_SVR() hasn't successfully executed yet, the above accessor methods will return None.
 
+.. _nu-SVR:
+
+NuSVR
+=====
+
 NuSVR Parameters
 ----------------
 
@@ -311,6 +346,11 @@ NuSVR Accessor Methods
 - **get_cross_val_scores_nu_SVR()**: Returns cross_val_scores_nu_SVR.
 
 Note: If run_nu_SVR() hasn't successfully executed yet, the above accessor methods will return None.
+
+.. _linear-SVR:
+
+LinearSVR
+=========
 
 LinearSVR Parameters
 --------------------
