@@ -66,3 +66,8 @@ Regression Methods
             Support Vector Machine <shallow_learning_methods/svm>
             XGBoost <shallow_learning_methods/xgb>
             Running All Regression Models <shallow_learning_methods/all_regression_models>
+
+Hyperparameter Optimization
+===========================
+
+Check out how to find the best hyperparameters for your model using `GridSearch. <shallow_learning_methods/grid_search>`_
