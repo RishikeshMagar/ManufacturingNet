@@ -11,7 +11,7 @@ About the Project
 =================
 ManufacturingNet provides a sustainable, open-source ecosystem of modern artificial intelligence tools for tackling
 diverse engineering challenges.
-ManufacturingNet is developed and maintained by the Mechanical and Artificial Intelligence (MAIL) Lab at Carnegie
+ManufacturingNet is developed and maintained by the Mechanical and Artificial Intelligence Lab (MAIL) at Carnegie
 Mellon University.
 
 Interested in our work? Check out our `website <https://www.manufacturingnet.io>`_, and grab our code from
