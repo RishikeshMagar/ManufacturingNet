@@ -102,7 +102,7 @@ After run_SVC() successfully trains the SVC model, the following instance data i
 SVC Methods
 -----------
 
-- **run_SVC()**: Prompts the user for the model parameters and trains a SVC model using attributes and labels. If successful, the SVC instance data is updated, and the model metrics are displayed.
+- **run_SVC()**: Prompts the user for the model parameters and trains a SVC model using attributes and labels. If successful, the SVC instance data is updated, and the model metrics are displayed. If the model is being used for binary classification, the ROC curve will be graphed and displayed.
 - **predict_SVC(dataset_X=None)**: Uses the SVC model to classify the observations in dataset_X. If successful, the classifications are displayed and returned. predict_SVC() can only be called after run_SVC() has successfully trained the classifier.
 
 SVC Accessor Methods
@@ -154,7 +154,7 @@ After run_nu_SVC() successfully trains the NuSVC model, the following instance d
 NuSVC Methods
 -------------
 
-- **run_nu_SVC()**: Prompts the user for the model parameters and trains a NuSVC model using attributes and labels. If successful, the NuSVC instance data is updated, and the model metrics are displayed.
+- **run_nu_SVC()**: Prompts the user for the model parameters and trains a NuSVC model using attributes and labels. If successful, the NuSVC instance data is updated, and the model metrics are displayed. If the model is being used for binary classification, the ROC curve will be graphed and displayed.
 - **predict_nu_SVC(dataset_X=None)**: Uses the NuSVC model to classify the observations in dataset_X. If successful, the classifications are displayed and returned. predict_nu_SVC() can only be called after run_nu_SVC() has successfully trained the classifier.
 
 NuSVC Accessor Methods

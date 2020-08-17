@@ -97,7 +97,7 @@ After run_classifier() successfully trains the classifier model, the following i
 Classifier Methods
 ------------------
 
-- **run_classifier()**: Prompts the user for the model parameters and trains a random forest classifier model using attributes and labels. If successful, the classifier instance data is updated, and the model metrics are displayed.
+- **run_classifier()**: Prompts the user for the model parameters and trains a random forest classifier model using attributes and labels. If successful, the classifier instance data is updated, and the model metrics are displayed. If the model is being used for binary classification, the ROC curve will be graphed and displayed.
 - **predict_classifier(dataset_X=None)**: Uses the random forest classifier model to classify the observations in dataset_X. If successful, the classifications are displayed and returned. predict_classifier() can only be called after run_classifier() has successfully trained the classifier.
 
 Classifier Accessor Methods

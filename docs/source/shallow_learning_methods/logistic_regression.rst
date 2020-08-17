@@ -59,7 +59,7 @@ After run() successfully trains the model, the following instance data is availa
 Methods
 =======
 
-- **run()**: Prompts the user for the model parameters and trains a logistic regression model using attributes and labels. If successful, the above instance data is updated, and the model metrics are displayed.
+- **run()**: Prompts the user for the model parameters and trains a logistic regression model using attributes and labels. If successful, the above instance data is updated, and the model metrics are displayed. If the model is being used for binary classification, the ROC curve will be graphed and displayed.
 - **predict(dataset_X=None)**: Uses the logistic regression model to classify the observations in dataset_X. If successful, the classifications are displayed and returned. predict() can only be called after run() has successfully trained the model.
 
 Accessor Methods
