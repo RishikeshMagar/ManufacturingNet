@@ -70,4 +70,4 @@ Regression Methods
 Hyperparameter Optimization
 ===========================
 
-Check out how to find the best hyperparameters for your model using `GridSearch. <shallow_learning_methods/grid_search>`_
+Check out how to find the best hyperparameters for your model using :doc:`GridSearch. <shallow_learning_methods/grid_search>`
