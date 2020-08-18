@@ -14,8 +14,7 @@
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
 
-import sphinx_bootstrap_theme
-
+from _themes import sphinx_bootstrap_theme
 # -- Project information -----------------------------------------------------
 
 project = 'Manufacturing Net'
@@ -77,4 +76,4 @@ html_theme_options = {
 html_static_path = ['_static']
 
 def setup(app):
-    app.add_stylesheet("custom-style.css")
+    app.add_css_file("custom-style.css")
