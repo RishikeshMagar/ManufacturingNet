@@ -14,7 +14,8 @@
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
 
-from _themes import sphinx_bootstrap_theme
+import sphinx_bootstrap_theme
+
 # -- Project information -----------------------------------------------------
 
 project = 'Manufacturing Net'
