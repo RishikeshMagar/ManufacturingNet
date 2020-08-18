@@ -11,7 +11,7 @@ installed.
 To check if Python3 is installed, open the terminal on Linux/MacOS or PowerShell on Windows and run the following
 command:
 
-.. code-block:: bash
+.. code::
 
     python3 --version
 
@@ -20,7 +20,7 @@ package manager. If you have a version of Python greater than 3.4, pip should al
 
 To check if pip is installed, open the terminal/PowerShell and run the following command:
 
-.. code-block:: bash
+.. code::
 
     pip --version
 
@@ -36,7 +36,7 @@ ManufacturingNet depends on the following packages:
 
 To install these packages, open the terminal/PowerShell and run the following command:
 
-.. code-block:: bash
+.. code::
 
     pip install matplotlib numpy pillow scipy sklearn torch torchvision xgboost
 
@@ -51,7 +51,7 @@ Installation
 
 After installing the above requirements, open the terminal/PowerShell and run the following command:
 
-.. code-block:: bash
+.. code::
 
     pip install -i https://test.pypi.org/simple/ ManufacturingNet
 
