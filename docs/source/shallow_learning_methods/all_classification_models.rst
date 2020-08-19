@@ -45,7 +45,7 @@ Attributes
 Methods
 =======
 
-- **run()**: Prompts for parameter input, instantiates and runs all of the above models, and outputs their results. For each model, the accuracy, ROC-AUC, and execution time are reported.
+- **run()**: Prompts for parameter input, instantiates and runs all of the above models, and outputs their results. For each model, the accuracy, five-fold cross validation score, and execution time are reported.
 
 Accessor Methods
 ----------------
@@ -87,4 +87,4 @@ Example Usage
     labels = dataset[:, 5]                          # Column 6 contains our class labels
     all_classification_models = AllClassificationModels(attributes, labels)
     all_classification_models.run()                 # This will trigger the command-line interface for parameter input
-                                                    # And output each model's accuracy, ROC-AUC, and execution time
+                                                    # And output each model's accuracy, five-fold cross validation score, and execution time
