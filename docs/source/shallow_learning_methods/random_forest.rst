@@ -81,6 +81,7 @@ Classifier Parameters
 
 The following parameters can be modified when run_classifier() is called:
 
+- **graph_results** *(boolean, default=False)*: Determines whether to plot the ROC curve. Supported for binary classification only.
 - **criterion** *('gini' or 'entropy', default='gini')*: Determines the metric for calculating split quality. 'gini' is for Gini impurity, and 'entropy' is for information gain.
 - **class_weight** *(boolean, default=False)*: Determines whether to automatically balance the class weights.
 
@@ -91,7 +92,8 @@ After run_classifier() successfully trains the classifier model, the following i
 
 - **classifier** *(model)*: The underlying random forest classifier model.
 - **accuracy** *(float)*: The classification accuracy score.
-- **roc_auc** *(float)*: The area under the receiver operating characteristic (ROC) curve from the prediction scores.
+- **roc_auc** *(float)*: The area under the receiver operating characteristic (ROC) curve from the prediction scores. Supported for binary classification only.
+- **confusion_matrix** *(2D array of integers)*: A matrix where the entry in the *i* th row and *j* th column is the number of observations present in group *i* and predicted to be in group *j*. Supported for multilabel classification only.
 - **cross_val_scores_classifier** *(array of floats)*: An array of the cross validation scores for the classifier model.
 
 Classifier Methods
@@ -106,6 +108,7 @@ Classifier Accessor Methods
 - **get_classifier()**: Returns classifier.
 - **get_accuracy()**: Returns accuracy.
 - **get_roc_auc()**: Returns roc_auc.
+- **get_confusion_matrix()**: Returns confusion_matrix.
 - **get_cross_val_scores_classifier()**: Returns cross_val_scores_classifier.
 
 Note: If run_classifier() hasn't successfully executed yet, the above accessor methods will return None.

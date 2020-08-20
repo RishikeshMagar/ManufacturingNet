@@ -11,7 +11,8 @@ Fortunately, ManufacturingNet can use the GridSearch algorithm to optimize the m
 accuracy.
 
 **GridSearch** performs hyperparameter optimization by performing an exhaustive search over the possible parameter
-values. If a model supports GridSearch, hyperparameter optimization will be offered during parameter input.
+values. If a model supports GridSearch, hyperparameter optimization will be offered during parameter input. After
+determining the best hyperparameters, the GridSearch score will be displayed.
 
 Supported Models
 ================

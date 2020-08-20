@@ -73,6 +73,13 @@ Modifier Methods
 Classification
 ==============
 
+Classifier Parameters
+---------------------
+
+When run_classifier() is called, the following parameter can be modified:
+
+- **graph_results** *(boolean, default=False)*: Determines whether to plot the ROC curve. Supported for binary classification only.
+
 Classifier Attributes
 ---------------------
 
@@ -82,8 +89,8 @@ After run_classifier() successfully trains the classification model, the followi
 - **precision_scores** *(array of floats)*: An array of the precision scores for all class labels.
 - **recall_scores** *(array of floats)*: An array of the recall scores for all class labels.
 - **accuracy** *(float)*: The classification accuracy score.
-- **confusion_matrix** *(2D array of integers)*: A matrix where the entry in the *i* th row and *j* th column is the number of observations present in group *i* and predicted to be in group *j*.
-- **roc_auc** *(float)*: The area under the receiver operating characteristic (ROC) curve from the prediction scores.
+- **confusion_matrix** *(2D array of integers)*: A matrix where the entry in the *i* th row and *j* th column is the number of observations present in group *i* and predicted to be in group *j*. Supported for multilabel classification only.
+- **roc_auc** *(float)*: The area under the receiver operating characteristic (ROC) curve from the prediction scores. Supported for binary classification only.
 - **classes** *(array of multiple possible types)*: An array of the known class labels.
 - **cross_val_scores_classifier** *(array of floats)*: An array of the cross validation scores for the classifier model.
 

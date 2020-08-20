@@ -73,6 +73,7 @@ SVC Parameters
 
 The following parameters can be modified when run_SVC() is called:
 
+- **graph_results** *(boolean, default=False)*: Determines whether to plot the ROC curve. Supported for binary classification only.
 - **C** *(float, default=1.0)*: Positive number that specifies the inverse of the regularization strength.
 - **kernel** *('linear', 'poly', 'rbf', 'sigmoid', 'precomputed'; default='rbf')*: Determines which kernel to use.
 - **degree** *(integer, default=3)*: If kernel is 'poly', the polynomial function is of this degree.
@@ -96,7 +97,8 @@ After run_SVC() successfully trains the SVC model, the following instance data i
 
 - **classifier_SVC** *(model)*: The underlying SVC model.
 - **accuracy_SVC** *(float)*: The SVC model's classification accuracy score.
-- **roc_auc_SVC** *(float)*: The area under the receiver operating characteristic (ROC) curve from the SVC prediction scores.
+- **roc_auc_SVC** *(float)*: The area under the receiver operating characteristic (ROC) curve from the SVC prediction scores. Supported for binary classification only.
+- **confusion_matrix_SVC** *(2D array of integers)*: A matrix where the entry in the *i* th row and *j* th column is the number of observations present in group *i* and predicted to be in group *j*. Supported for multilabel classification only.
 - **cross_val_scores_SVC** *(array of floats)*: An array of the cross validation scores for the SVC model.
 
 SVC Methods
@@ -111,6 +113,7 @@ SVC Accessor Methods
 - **get_classifier_SVC()**: Returns classifier_SVC.
 - **get_accuracy_SVC()**: Returns accuracy_SVC.
 - **get_roc_auc_SVC()**: Returns roc_auc_SVC.
+- **get_confusion_matrix_SVC()**: Returns confusion_matrix_SVC.
 - **get_cross_val_scores_SVC()**: Returns cross_val_scores_SVC.
 
 Note: If run_SVC() hasn't successfully executed yet, the above accessor methods will return None.
@@ -125,6 +128,7 @@ NuSVC Parameters
 
 The following parameters can be modified when run_nu_SVC() is called:
 
+- **graph_results** *(boolean, default=False)*: Determines whether to plot the ROC curve. Supported for binary classification only.
 - **nu** *(float, default=0.5)*: A decimal for the maximum fraction of margin errors and the minimum fraction of support vectors. Should be greater than 0 and less than or equal to 1.
 - **kernel** *('linear', 'poly', 'rbf', 'sigmoid', 'precomputed'; default='rbf')*: Determines which kernel to use.
 - **degree** *(integer, default=3)*: If kernel is 'poly', the polynomial function is of this degree.
@@ -148,7 +152,8 @@ After run_nu_SVC() successfully trains the NuSVC model, the following instance d
 
 - **classifier_nu_SVC** *(model)*: The underlying NuSVC model.
 - **accuracy_nu_SVC** *(float)*: The NuSVC model's classification accuracy score.
-- **roc_auc_nu_SVC** *(float)*: The area under the receiver operating characteristic (ROC) curve from the NuSVC prediction scores.
+- **roc_auc_nu_SVC** *(float)*: The area under the receiver operating characteristic (ROC) curve from the NuSVC prediction scores. Supported for binary classification only.
+- **confusion_matrix_nu_SVC** *(2D array of integers)*: A matrix where the entry in the *i* th row and *j* th column is the number of observations present in group *i* and predicted to be in group *j*. Supported for multilabel classification only.
 - **cross_val_scores_nu_SVC** *(array of floats)*: An array of the cross validation scores for the NuSVC model.
 
 NuSVC Methods
@@ -163,6 +168,7 @@ NuSVC Accessor Methods
 - **get_classifier_nu_SVC()**: Returns classifier_nu_SVC.
 - **get_accuracy_nu_SVC()**: Returns accuracy_nu_SVC.
 - **get_roc_auc_nu_SVC()**: Returns roc_auc_nu_SVC.
+- **get_confusion_matrix_nu_SVC()**: Returns confusion_matrix_nu_SVC.
 - **get_cross_val_scores_nu_SVC()**: Returns cross_val_scores_nu_SVC.
 
 Note: If run_nu_SVC() hasn't successfully executed yet, the above accessor methods will return None.

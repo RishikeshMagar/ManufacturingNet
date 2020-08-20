@@ -26,6 +26,7 @@ When the run() method is called, the following parameters can be modified:
 
 - **test_size** *(float, default=0.25)*: The proportion of the dataset to be used for testing the model; the proportion of the dataset to be used for training will be the complement of test_size.
 - **cv** *(integer, default=None)*: The number of folds to use for cross validation.
+- **graph_results** *(boolean, default=False)*: Determines whether to plot the ROC curve. Supported for binary classification only.
 - **penalty** *('l1', 'l2', 'elasticnet', or 'none'; default='l2')*: Specifies the penalization norm.
 - **dual** *(boolean, default=False)*: If True, dual formulation is used; else, primal formulation is used.
 - **tol** *(float, default=0.0001)*: The acceptable margin of error for stopping criteria.
@@ -53,7 +54,8 @@ After run() successfully trains the model, the following instance data is availa
 - **classes** *(array of multiple possible types)*: An array of the known class labels.
 - **n_iter** *(array of integers or (1,))*: The actual number of iterations for all classes. If binary or multinomial, n_iter is one element. For the 'liblinear' solver, only the maximum number of iterations across all classes is given.
 - **accuracy** *(float)*: The classification accuracy score.
-- **roc_auc** *(float)*: The area under the receiver operating characteristic (ROC) curve from the prediction scores.
+- **roc_auc** *(float)*: The area under the receiver operating characteristic (ROC) curve from the prediction scores. Supported for binary classification only.
+- **confusion_matrix** *(2D array of integers)*: A matrix where the entry in the *i* th row and *j* th column is the number of observations present in group *i* and predicted to be in group *j*. Supported for multilabel classification only.
 - **cross_val_scores** *(array of floats)*: An array of the cross validation scores for the model.
 
 Methods
@@ -77,6 +79,7 @@ wasn't passed in during initialization, get_labels() will return None.
 - **get_n_iter()**: Returns n_iter.
 - **get_accuracy()**: Returns accuracy.
 - **get_roc_auc()**: Returns roc_auc.
+- **get_confusion_matrix()**: Returns confusion_matrix.
 - **get_cross_val_scores()**: Returns cross_val_scores.
 
 Note: If run() hasn't successfully executed yet, the above accessor methods will return None.
