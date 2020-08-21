@@ -34,17 +34,17 @@ ManufacturingNet depends on the following packages:
 - `Scikit-Learn <https://scikit-learn.org/stable/>`_
 - `XGBoost <https://xgboost.readthedocs.io/en/latest/>`_
 
-To install these packages, open the terminal/PowerShell and run the following command:
-
-.. code::
-
-    pip install matplotlib numpy pillow scipy sklearn torch torchvision xgboost
+These packages will be automatically installed when you install ManufacturingNet.
 
 Handling Import Errors
 ----------------------
 
 The above packages should be all you need to run ManufacturingNet, but if you run into errors like
-``ImportError: No module named ModuleName``, try installing the module with pip like above.
+``ImportError: No module named ModuleName``, try installing the module with pip like so:
+
+.. code::
+
+    pip install ModuleName
 
 Installation
 ============
