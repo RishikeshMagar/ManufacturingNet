@@ -41,7 +41,6 @@ When run_classifier() or run_regressor() is called, the following parameters can
     - If max_features is None, then all features are considered.
 - **max_leaf_nodes** *(integer, default=None)*: Determines the maximum number of leaf nodes allowed per tree. If None, then trees can have an unlimited number of leaf nodes.
 - **min_impurity_decrease** *(float, default=0.0)*: The impurity decrease required to split a node.
-- **min_impurity_split** *(float, default=None)*: The maximum impurity allowed for leaf nodes. If a leaf node's impurity exceeds this, it will split.
 - **bootstrap** *(boolean, default=True)*: Determines whether bootstrap samples are used when growing trees.
 - **oob_score** *(boolean, default=False)*: Determines whether to use out-of-bag samples.
 - **n_jobs** *(integer, default=None)*: The number of jobs to run in parallel. If None, n_jobs is 1. If -1, all processors are used.
