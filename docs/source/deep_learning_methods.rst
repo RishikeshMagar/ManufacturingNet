@@ -44,7 +44,7 @@ Deep Learning Methods
 
             Deep fully connected neural network  <deep_learning_methods/MLP>
             Convolutional Neural Network <deep_learning_methods/CNN>
-            Convolutional Neural Network- 3D <deep_learning_methods/CNN_3D>
+            Convolutional Neural Network - 3D <deep_learning_methods/CNN_3D>
             Long Short Term Memory Networks <deep_learning_methods/LSTM>
             Convolutional Long Short Term Memory Networks (CNN - LSTM) <deep_learning_methods/CNN_LSTM>
 
