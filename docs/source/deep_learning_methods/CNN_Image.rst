@@ -2,3 +2,83 @@
 Convolutional Neural Network - Images
 *****************
 
+A CNN is a deep learning architecture that is inspired from the human visual cortex. They are generally used in analysing visual data, signal data and mostly have applications in classification problems. In the ManufacturingNet package we have provided the CNN class for analyzing vibration signal data and also image data.
+
+The CNN can be used through **CNNSignal** class. In the package we have made a distinction between analyzing signal data and the image data. This distinction gives the advantage of using the powerful CNN network with both these type of datasets 
+
+CNNSignal*(attributes=None, labels=None)*
+
+Parameters
+==========
+
+When initializing a CNN object, the following parameters need to be passed:
+
+- **attributes** *(numpy array, default=None)*: A numpy array of the signal reshaped as a 2D array. The input shape must be in the form (in_channels, num_channels, height, width).
+- **labels** *(numpy array, default=None)*: A numpy array of the class labels.
+
+The following hyperparameters must be entered to construct the CNN model:
+
+- **Number_of_Convolutions** *(integer, default=None)*: The number of convolutional layers to be used in the network.
+- **kernel_size** *(integer, default = (3,3))*: The size of the kernel to be used in the convolution operation.
+- **Padding** *(integer, default=(0,0))*: The image padding to be used for the network.
+- **Stride** *(integer, default=(1,1))*: The stride to be used for the convolutional filter.
+- **Dropout** *(float, default=0.0)*: The dropout ratio in the final layer of the network.
+- **Pooling_Layers** *(boolean)*: Determines whether max pooling should be applied to the convolutional layer. If default is chosen the pooling is applied only to the last convolutional layer.
+- **Pooling_Size** *(integer, default=(2,2))*: The size of the of the pooling filter representing the region over which pooling is applied.
+- **Pooling_Stride** *(boolean, default=(2,2))*: The stride for the pooling filter.
+- **Batch_Normalization** *(boolean, default =1)*: Determines whether or not batch normalization must be applied to the convolutional layer. By default, all the convolutional layers will have batch normalization,
+- **Num_Classes** *(integer)*: The number of classes for the classification problem. Please enter 1 if you are dealing with a regression problem
+- **Batch_Size** *(integer)*: Sets the batch size for the model.
+- **Validation set size** *(float, default = 0.2)*: The size of the validation set over which the trained model is to be tested for results.
+- **Loss_Function** *(integer)*: Sets the loss function to be used for the problem.
+- **Optimizer** *(integer, default='Adam')*: Sets the optimizer among 'Adam' and 'SGD'.
+- **Learning_rate** *(integer, default=0.001)*: The learning rate to be used when training the network.
+- **Scheduler** *(integer, default=None)*: The learning rate scheduler to be used when training the network.
+- **Epochs** *(integer): The number of epochs for which the model is to be trained
+
+Attributes
+==========
+
+After training the model, the following instance data is available:
+
+- **Training_loss** *(float)*: The training loss after every epoch for the model.
+- **Training_Accuarcy** *(float)*: The validation accuracy of the model in case of classification problem.
+- **Validation_Loss** *(float)*: The validation loss after every epoch for the model.
+- **Validation_Accuracy** *(float)*: The validation accuracy after every epeoch for the model.
+- **Epoch Time** *(float)*: The time required in seconds to train every epoch.
+- **accuracy** *(float)*: The classification accuracy score.
+- **roc_auc** *(float)*: The area under the receiver operating characteristic (ROC) curve from the prediction scores. Supported for binary classification only.
+- **confusion_matrix** *(2D array of integers)*: A matrix where the entry in the *i* th row and *j* th column is the number of observations present in group *i* and predicted to be in group *j*. Supported for multilabel classification only.
+- **cross_val_scores** *(array of floats)*: An array of the cross validation scores for the model.
+
+Methods
+=======
+
+- **get_predict(dataset_X=None)**: Uses the trained model to do predictions on a completely new dataset.
+
+Accessor Methods
+----------------
+
+- **_get_batchsize_input()**: Returns batchsize.
+- **_get_valize_input()**: Returns Validation set ratio.
+- **_get_loss_function()**: Returns loss function used in the network.
+- **_get_optimizer()**: Returns the optimizer used in the network.
+- **_get_scheduler()**: Returns the learning rate scheduler.
+- **_get_epoch**: Returns number of epochs for which the model needs to be trained.
+
+Note: If model hasn't successfully executed yet, the above accessor methods will return None.
+
+
+Example Usage
+=============
+
+.. code-block:: python
+    :linenos:
+
+    from ManufacturingNet.deep_learning_methods import CNNModel
+    import numpy as np
+
+    X = np.load('CWRU_dataset.npy')
+    labels = np.load("CWRU_labels.npy")
+    attributes = X.reshape(len(X),1,40,40)                    # Convert to required shape format 
+    model = CNNModel(attributes, labels)
