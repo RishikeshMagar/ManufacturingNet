@@ -1,10 +1,10 @@
 *******************
-Convolutional Neural Network (CNN)
+Convolutional Neural Network (CNN) - Signals
 *******************
 
 A CNN is a deep learning architecture that is inspired from the human visual cortex. They are generally used in analysing visual data, signal data and mostly have applications in classification problems. In the ManufacturingNet package we have provided the CNN class for analyzing vibration signal data and also image data.
 
-The CNN can be used through **CNNSignal** class. In the package we have made a distinction between analyzing signal data and the image data. This distinction gives the advantage of using the powerful CNN network with both these type of datasets 
+The CNN can be used through **CNNModel** class. In the package we have made a distinction between analyzing signal data and the image data. This distinction gives the advantage of using the powerful CNN network with both these type of datasets 
 
 CNNSignal*(attributes=None, labels=None)*
 
