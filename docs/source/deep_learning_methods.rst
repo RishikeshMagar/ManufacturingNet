@@ -48,9 +48,3 @@ Deep Learning Models
             Convolutional Neural Network - 3D <deep_learning_methods/CNN_3D>
             Long Short Term Memory Networks <deep_learning_methods/LSTM>
             Convolutional Long Short Term Memory Networks (CNN - LSTM) <deep_learning_methods/CNN_LSTM>
-
-
-Hyperparameter Optimization
-===========================
-
-Check out how to find the best hyperparameters for your model using :doc:`GridSearch. <shallow_learning_methods/grid_search>`
