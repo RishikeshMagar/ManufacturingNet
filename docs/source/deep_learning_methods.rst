@@ -1,5 +1,6 @@
+************************
 Deep Learning Methods
-=====================
+************************
 
 ManufacturingNet has inbuilt implementations of various deep learning models. Deep learning methods are known to scale with data and have shown great promise in different areas of reasearch. As a package we have implemented Multi-Layer Perceptron, Convolutioanal Neural Network(CNN), Long Short Term Memory Networks(LSTM), CNN-LSTM  
 
@@ -36,7 +37,7 @@ datapoint's feature(s) into the function and calculates the result.
 As a general rule, if your dataset's dependent variables are **not continuous**, you should use classification. For
 example, if your dependent variables are strings or numerical categories, use a classification model.
 
-Deep Learning Methods
+Deep Learning Models
 ======================
 
     .. toctree::
