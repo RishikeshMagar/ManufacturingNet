@@ -226,7 +226,7 @@ Classification Example Usage
 .. code-block:: python
     :linenos:
 
-    from ManufacturingNet.shallow_learning_methods import SVM
+    from ManufacturingNet.models import SVM
     from pandas import read_csv
 
     dataset = read_csv('/path/to/dataset.csv')
@@ -408,7 +408,7 @@ Regression Example Usage
 .. code-block:: python
     :linenos:
 
-    from ManufacturingNet.shallow_learning_methods import SVM
+    from ManufacturingNet.models import SVM
     from pandas import read_csv
 
     dataset = read_csv('/path/to/dataset.csv')

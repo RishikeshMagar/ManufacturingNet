@@ -5,7 +5,7 @@ Running All Classification Models
 If you are having trouble picking a model (or are simply curious about how each model compares), ManufacturingNet provides
 a simple way to train all supported classification models on one dataset.
 
-ManufacturingNet.shallow_learning_methods' **AllClassificationModels** class trains the following models on your dataset with default parameters:
+ManufacturingNet.models' **AllClassificationModels** class trains the following models on your dataset with default parameters:
 
 - Logistic Regression
 - Random Forest
@@ -30,7 +30,7 @@ When the run() method is called, the following parameters can be modified:
 - **verbose** *(boolean, default=False)*: Determines whether logs are outputted during model training and testing.
 
 Note: All model-specific parameters are kept as their defaults for simplicity. For more control over each model, use their
-corresponding classes in ManufacturingNet.shallow_learning_methods.
+corresponding classes in ManufacturingNet.models.
 
 Attributes
 ==========
@@ -78,7 +78,7 @@ Example Usage
 .. code-block:: python
     :linenos:
 
-    from ManufacturingNet.shallow_learning_methods import AllClassificationModels
+    from ManufacturingNet.models import AllClassificationModels
     from pandas import read_csv
 
     dataset = read_csv('/path/to/dataset.csv')

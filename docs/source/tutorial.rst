@@ -69,7 +69,7 @@ example, to import the linear regression model, use this code:
 
 .. code-block:: python
 
-    from ManufacturingNet.shallow_learning_methods import LinRegression
+    from ManufacturingNet.models import LinRegression
 
 To import the feature extraction functionality, use this code:
 

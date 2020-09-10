@@ -96,7 +96,7 @@ Example Usage
 .. code-block:: python
     :linenos:
 
-    from ManufacturingNet.shallow_learning_methods import LogRegression
+    from ManufacturingNet.models import LogRegression
     from pandas import read_csv
 
     dataset = read_csv('/path/to/dataset.csv')

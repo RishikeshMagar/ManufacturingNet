@@ -118,7 +118,7 @@ Classifier Example Usage
 .. code-block:: python
     :linenos:
 
-    from ManufacturingNet.shallow_learning_methods import RandomForest
+    from ManufacturingNet.models import RandomForest
     from pandas import read_csv
 
     dataset = read_csv('/path/to/dataset.csv')
@@ -180,7 +180,7 @@ Regressor Example Usage
 .. code-block:: python
     :linenos:
 
-    from ManufacturingNet.shallow_learning_methods import RandomForest
+    from ManufacturingNet.models import RandomForest
     from pandas import read_csv
 
     dataset = read_csv('/path/to/dataset.csv')
