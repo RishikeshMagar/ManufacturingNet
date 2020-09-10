@@ -2,30 +2,31 @@
 CNN - 3D
 *****************************
 
-A CNN is a deep learning architecture that is inspired from the human visual cortex. They are generally used in analysing visual data, signal data and mostly have applications in classification problems. In the ManufacturingNet package we have provided the CNN class for analyzing vibration signal data and also image data.
+This is a more complex convolution neural network that is used for analyzing data where temporal or volumetric context is important. Common domains for the usage of CNN3D model are Medical imaging, analyzing series of frames or images (video), self-driving, etc. In ManufacturingNet, we have built CNN3D model for video processing.
 
-The CNN can be used through **CNNSignal** class. In the package we have made a distinction between analyzing signal data and the image data. This distinction gives the advantage of using the powerful CNN network with both these type of datasets 
+The CNN can be used through **CNN3D** class. Users can develop their custom designed CNN3D model by answering simple questions and can even choose default choices for some hyper-parameters, if needed.
 
-CNNSignal*(attributes=None, labels=None)*
+CNN3D*(attributes=None, labels=None)*
 
 Parameters
 ==========
 
 When initializing a CNN object, the following parameters need to be passed:
 
-- **attributes** *(numpy array, default=None)*: A numpy array of the signal reshaped as a 2D array. The input shape must be in the form (in_channels, num_channels, height, width).
+- **attributes** *(numpy array, default=None)*: A numpy array of the input reshaped as a 3D array. The input shape must be in the form (batch_size,in_channels, depth, height, width).
 - **labels** *(numpy array, default=None)*: A numpy array of the class labels.
 
 The following hyperparameters must be entered to construct the CNN model:
 
 - **Number_of_Convolutions** *(integer, default=None)*: The number of convolutional layers to be used in the network.
-- **kernel_size** *(integer, default = (3,3))*: The size of the kernel to be used in the convolution operation.
-- **Padding** *(integer, default=(0,0))*: The image padding to be used for the network.
-- **Stride** *(integer, default=(1,1))*: The stride to be used for the convolutional filter.
+- **kernel_size** *(integer, default = (3,3,3))*: The size of the kernel to be used in the convolution operation.
+- **Padding** *(integer, default=(0,0,0))*: The image padding to be used for the network.
+- **Stride** *(integer, default=(1,1,1))*: The stride to be used for the convolutional filter.
 - **Dropout** *(float, default=0.0)*: The dropout ratio in the final layer of the network.
 - **Pooling_Layers** *(boolean)*: Determines whether max pooling should be applied to the convolutional layer. If default is chosen the pooling is applied only to the last convolutional layer.
-- **Pooling_Size** *(integer, default=(2,2))*: The size of the of the pooling filter representing the region over which pooling is applied.
-- **Pooling_Stride** *(boolean, default=(2,2))*: The stride for the pooling filter.
+- **Pooling_Size** *(integer, default=(3,3,3))*: The size of the of the pooling filter representing the region over which pooling is applied.
+- **Pooling_Stride** *(integer, default=(2,2,2))*: The stride for the pooling filter.
+- **Pooling_Padding** *(integer, default=(0,0,0,))*: The padding to used for the pooling filter
 - **Batch_Normalization** *(boolean, default =1)*: Determines whether or not batch normalization must be applied to the convolutional layer. By default, all the convolutional layers will have batch normalization,
 - **Num_Classes** *(integer)*: The number of classes for the classification problem. Please enter 1 if you are dealing with a regression problem
 - **Batch_Size** *(integer)*: Sets the batch size for the model.
@@ -75,10 +76,9 @@ Example Usage
 .. code-block:: python
     :linenos:
 
-    from ManufacturingNet.deep_learning_methods import CNNModel
+    from ManufacturingNet.models import CNN3D
     import numpy as np
 
-    X = np.load('CWRU_dataset.npy')
-    labels = np.load("CWRU_labels.npy")
-    attributes = X.reshape(len(X),1,40,40)                    # Convert to required shape format 
-    model = CNNModel(attributes, labels)
+    X = np.load('lithography_dataset.npy')
+    labels = np.load("lithography_labels.npy")
+    model = CNN3D(X, labels)
