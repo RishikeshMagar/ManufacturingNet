@@ -1,5 +1,5 @@
 *******
-DNN - Deep fully connected Neural Network
+DNN - Deep Neural Network
 *******
 
 Deep Neural Network is also known as Fully Connected Neural Net or Multi Layer Perceptron (MLP). DNN is a deep learning architecture which is widely used for regression as well as classification problems.  DNN is capable of learning any mapping function and have been proven to be a universal approximation algorithm.
