@@ -6,7 +6,7 @@ This is a more complex convolution neural network that is used for analyzing dat
 
 The CNN can be used through **CNN3D** class. Users can develop their custom designed CNN3D model by answering simple questions and can even choose default choices for some hyper-parameters, if needed.
 
-CNN3D*(attributes=None, labels=None, shuffle=True)*
+CNN3D *(attributes=None, labels=None, shuffle=True)*
 
 Parameters
 ==========
