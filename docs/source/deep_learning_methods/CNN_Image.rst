@@ -19,6 +19,7 @@ When initializing a CNN2dImageModel object, the following parameters need to be 
 - **val_data_address** *(validation data folder address, default=None)*: Validation data folder address input in string format. 
 
 The following hyperparameters must be entered to construct the CNN model:
+
 - **Input image size** *(integers, (heigth, width, channels), default=None)*: Image size for training the model. Images will be resized to the size enterd. To convert colored images to grayscale images, third argument must be pass as 1. If no resizing required, original shape needs to be entered. All the images must have the same size! Input must be non-zero and positive numbers.
 - **Number_of_Convolutions** *(integer, default=None)*: The number of convolutional layers to be used in the network.
 - **kernel_size** *(integer, default = (3,3))*: The size of the kernel to be used in the convolution operation.
