@@ -28,8 +28,8 @@ The following quenstions and hyperparameters must be entered to construct the DN
 - **Loss_Function** *(integer)*: Sets the loss function to be used for the problem. Input a number corresponding to required loss function.
 - **Optimizer** *(integer, default='Adam')*: Sets the optimizer among 'Adam' and 'SGD'. Input 1 for Adam or 2 for SGD
 - **Learning_rate** *(integer, default=0.001)*: The learning rate to be used when training the network.
-- **Scheduler** *(integer, default=None)*: The learning rate scheduler to be used when training the network.
-- - **StepLR Scheduler** *(integer, default=None)*: The learning rate scheduler to be used when training the network.
+- **Scheduler** *(integer, default=None)*: The learning rate scheduler to be used when training the network. Input 1 for None, 2 for StepLR and 3 for MultiStepLR
+    - **StepLR Scheduler step** *(integer, default=None)*: The learning rate scheduler to be used when training the network.
 - **Epochs** *(integer): The number of epochs for which the model is to be trained
 
 Attributes
