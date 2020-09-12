@@ -69,9 +69,9 @@ Example Usage
 .. code-block:: python
     :linenos:
 
-    from ManufacturingNet.models import CNN3D
+    from ManufacturingNet.models import CNN2DImageModel
     import numpy as np
-
-    X = np.load('lithography_dataset.npy')
-    labels = np.load("lithography_labels.npy")
-    model = CNN3D(X, labels)
+    
+    train_data_address = train_data_g/
+    val_data_address = val_data_g/
+    model = CNN2DImageModel(train_data_address, val_data_address)
