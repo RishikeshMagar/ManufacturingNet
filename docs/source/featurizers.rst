@@ -1,5 +1,5 @@
 ***********
-Featurizers
+Featurizer
 ***********
 
 Featurizer is a library developed for extracting statistical features from raw signals produced by sensors. Currently, there are 20 features in the library. These features are tested on vibration signals, accelerometer signals, etc.
