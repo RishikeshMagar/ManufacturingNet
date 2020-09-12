@@ -6,7 +6,7 @@ Deep Neural Network is also known as Fully Connected Neural Net or Multi Layer P
 
 The DNN can be used through **DNNModel** class.
 
-DNNModel*(attributes=None, labels=None, shuffle=True)*
+DNNModel *(attributes=None, labels=None, shuffle=True)*
 
 Parameters
 ==========
@@ -31,7 +31,7 @@ The following quenstions and hyperparameters must be entered to construct the DN
 - **Scheduler** *(integer, default=None)*: The learning rate scheduler to be used when training the network. Input 1 for None, 2 for StepLR and 3 for MultiStepLR scheduler.
 - **Scheduler specific inputs:**
     - **StepLR Scheduler step** *(integer, default=None)*: Number of epochs after which learning rate needs to be changed. Input must be a non-zero and positive number.
-    - **MultiStepLR Milestones** (integers, default=None)*: Number of epochs at which learning rate needs to be changed. Input must be non-zero and positive numbers.
+    - **MultiStepLR Milestones** *(integers, default=None)*: Number of epochs at which learning rate needs to be changed. Input must be non-zero and positive numbers.
     - **Multiplying factor** *(float, default=None)*: Factor by which learning rate to be multiplied. Input must be a non-zero and positive number.
 - **Epochs** *(integer)*: The number of epochs for which the model is to be trained. Input must be a non-zero and positive number.
 
