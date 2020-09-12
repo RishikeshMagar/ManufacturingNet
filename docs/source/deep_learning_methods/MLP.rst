@@ -29,7 +29,7 @@ The following quenstions and hyperparameters must be entered to construct the DN
 - **Optimizer** *(integer, default='Adam')*: Sets the optimizer among 'Adam' and 'SGD'. Input 1 for Adam or 2 for SGD.
 - **Learning_rate** *(integer, default=0.001)*: The learning rate to be used when training the network.
 - **Scheduler** *(integer, default=None)*: The learning rate scheduler to be used when training the network. Input 1 for None, 2 for StepLR and 3 for MultiStepLR.
-    - **StepLR Scheduler step** *(integer, default=None)*: Number of epochs after which learning rate needs to be changed. Input must be a non-zero and positive.
+    -- **StepLR Scheduler step** *(integer, default=None)*: Number of epochs after which learning rate needs to be changed. Input must be a non-zero and positive.
     - **Multiplying factor** *(flaot, default=None)*: Factor by which learning rate to be multiplied. Input must be a non-zero and positive.
     - **MultiStepLR Milestone** (integers, default=None)*: Number of epochs at which learning rate needs to be changed. Input must be non-zero and positive.
     - **Multiplying factor** *(flaot, default=None)*: Factor by which learning rate to be multiplied. Input must be a non-zero and positive.
