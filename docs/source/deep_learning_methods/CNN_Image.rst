@@ -60,7 +60,7 @@ After training the model, the following instance data is available:
 Methods
 =======
 
-- **get_predict(dataset_X=None)**: Uses the trained model to do predictions on a completely new data. A batch of datapoints can also be passed. The format must be same as input data (test data batch size, in_channels, depth, height, width).
+- **get_predict(dataset_X=None)**: Uses the trained model to do predictions on a completely new data. A batch of datapoints can also be passed. The format must be same as input data (test data batch size, in_channels, height, width). Images must be converted to matrix and image size must be same as training image size(**Input image size**).
 
 
 Example Usage
