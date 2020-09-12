@@ -28,14 +28,17 @@ The following hyperparameters must be entered to construct the CNN model:
 - **Pooling_Stride** *(boolean, default=(2,2))*: The stride for the pooling filter.
 - **Batch_Normalization** *(boolean, default =1)*: Determines whether or not batch normalization must be applied to the convolutional layer. By default, all the convolutional layers will have batch normalization,
 - **Num_Classes** *(integer)*: The number of classes for the classification problem. Please enter 1 if you are dealing with a regression problem
-- **Batch_Size** *(integer)*: Sets the batch size for the model.
+- **Batch_Size** *(integer)*: Sets the batch size for training the model.
 - **Validation set size** *(float, default = 0.2)*: The size of the validation set over which the trained model is to be tested for results.
-- **Loss_Function** *(integer)*: Sets the loss function to be used for the problem.
-- **Optimizer** *(integer, default='Adam')*: Sets the optimizer among 'Adam' and 'SGD'.
-- **Learning_rate** *(integer, default=0.001)*: The learning rate to be used when training the network.
-- **Scheduler** *(integer, default=None)*: The learning rate scheduler to be used when training the network.
-- **Epochs** *(integer): The number of epochs for which the model is to be trained
-
+- **Loss_Function** *(integer)*: Sets the loss function to be used for the problem. Input a number corresponding to required loss function.
+- **Optimizer** *(integer, default='Adam')*: Sets the optimizer among 'Adam' and 'SGD'. Input 1 for Adam or 2 for SGD.
+- **Learning_rate** *(integer, default=0.001)*: The learning rate to be used when training the network. Input must be a non-zero and positive number.
+- **Scheduler** *(integer, default=None)*: The learning rate scheduler to be used when training the network. Input 1 for None, 2 for StepLR and 3 for MultiStepLR scheduler.
+- **Scheduler specific inputs:**
+    - **StepLR Scheduler step** *(integer, default=None)*: Number of epochs after which learning rate needs to be changed. Input must be a non-zero and positive number.
+    - **MultiStepLR Milestones** (integers, default=None)*: Number of epochs at which learning rate needs to be changed. Input must be non-zero and positive numbers.
+    - **Multiplying factor** *(float, default=None)*: Factor by which learning rate to be multiplied. Input must be a non-zero and positive number.
+- **Epochs** *(integer): The number of epochs for which the model is to be trained. Input must be a non-zero and positive number.
 Attributes
 ==========
 
