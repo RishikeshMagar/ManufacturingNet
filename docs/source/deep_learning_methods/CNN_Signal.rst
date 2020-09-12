@@ -13,7 +13,7 @@ Parameters
 
 When initializing a CNN object, the following parameters need to be passed:
 
-- **attributes** *(numpy array, default=None)*: A numpy array of the signal reshaped as a 2D array. The input shape must be in the form (in_channels, num_channels, height, width).
+- **attributes** *(numpy array, default=None)*: A numpy array of the signal reshaped as a 2D array. The input shape must be in the form (total number of data points, num_channels, height, width).
 - **labels** *(numpy array, default=None)*: A numpy array of the class labels.
 
 The following hyperparameters must be entered to construct the CNN model:
@@ -42,31 +42,20 @@ Attributes
 After training the model, the following instance data is available:
 
 - **Training_loss** *(float)*: The training loss after every epoch for the model.
-- **Training_Accuarcy** *(float)*: The validation accuracy of the model in case of classification problem.
+- **Training_Accuarcy** *(float)*: The validation accuracy of the model in case of the classification problem.
 - **Validation_Loss** *(float)*: The validation loss after every epoch for the model.
-- **Validation_Accuracy** *(float)*: The validation accuracy after every epeoch for the model.
+- **Validation_Accuracy** *(float)*: The validation accuracy after every epeoch for the model in case of the classification problem.
 - **Epoch Time** *(float)*: The time required in seconds to train every epoch.
-- **accuracy** *(float)*: The classification accuracy score.
-- **roc_auc** *(float)*: The area under the receiver operating characteristic (ROC) curve from the prediction scores. Supported for binary classification only.
 - **confusion_matrix** *(2D array of integers)*: A matrix where the entry in the *i* th row and *j* th column is the number of observations present in group *i* and predicted to be in group *j*. Supported for multilabel classification only.
-- **cross_val_scores** *(array of floats)*: An array of the cross validation scores for the model.
+- **r2 score** *(float)*: The R2 score for the validation set in case of the regression problem.
+- **Training and validation loss graph**: Displays a 'Loss' vs 'Epoch' graph and saves the same graph in the root directory.
+- **Training and validation accuracy graph**: Displays a 'Accuracy' vs 'Epoch' graph and saves the same graph in the root directory in case of the classification problem..
+- **Validation r2 score graph**: Displays a 'Predictions' vs 'Ground truth' graph and saves the same graph in the root directory in case of the regression problem..
 
 Methods
 =======
 
-- **get_predict(dataset_X=None)**: Uses the trained model to do predictions on a completely new dataset.
-
-Accessor Methods
-----------------
-
-- **_get_batchsize_input()**: Returns batchsize.
-- **_get_valize_input()**: Returns Validation set ratio.
-- **_get_loss_function()**: Returns loss function used in the network.
-- **_get_optimizer()**: Returns the optimizer used in the network.
-- **_get_scheduler()**: Returns the learning rate scheduler.
-- **_get_epoch**: Returns number of epochs for which the model needs to be trained.
-
-Note: If model hasn't successfully executed yet, the above accessor methods will return None.
+- **get_predict(dataset_X=None)**: Uses the trained model to do predictions on a completely new data. A batch of datapoints can also be passed. The format must be same as input data (test data batch size, num_channels, height, width).
 
 
 Example Usage
