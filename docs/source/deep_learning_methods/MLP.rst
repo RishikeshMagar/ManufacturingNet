@@ -1,39 +1,35 @@
 *******
-Deep fully connected neural network (MLP)
+DNN - Deep fully connected Neural Network
 *******
 
-A CNN is a deep learning architecture that is inspired from the human visual cortex. They are generally used in analysing visual data, signal data and mostly have applications in classification problems. In the ManufacturingNet package we have provided the CNN class for analyzing vibration signal data and also image data.
+Deep Neural Network is also known as Fully Connected Neural Net or Multi Layer Perceptron (MLP). A DNN is a deep learning architecture which is mostly widely used for regression as well as classification problems.  DNN is capable of learning any mapping function and have been proven to be a universal approximation algorithm.
 
-The CNN can be used through **CNNSignal** class. In the package we have made a distinction between analyzing signal data and the image data. This distinction gives the advantage of using the powerful CNN network with both these type of datasets 
+The CNN can be used through **DNNModel** class.
 
-CNNSignal*(attributes=None, labels=None)*
+DNNModel*(attributes=None, labels=None, shuffle=True)*
 
 Parameters
 ==========
 
-When initializing a CNN object, the following parameters need to be passed:
+When initializing a DNNModel object, the following parameters need to be passed:
 
-- **attributes** *(numpy array, default=None)*: A numpy array of the signal reshaped as a 2D array. The input shape must be in the form (in_channels, num_channels, height, width).
-- **labels** *(numpy array, default=None)*: A numpy array of the class labels.
+- **attributes** *(numpy array, default=None)*: A numpy array of the features as a 2D array. The input shape must be in the form (total number of data points, Features).
+- **labels** *(numpy array, default=None)*: A numpy array of the class labels for classification problem or numbers for regression problem. The input shape for labels must be in the form (total number of data points, labels)
 
-The following hyperparameters must be entered to construct the CNN model:
+The following quenstions and hyperparameters must be entered to construct the DNN model:
 
-- **Number_of_Convolutions** *(integer, default=None)*: The number of convolutional layers to be used in the network.
-- **kernel_size** *(integer, default = (3,3))*: The size of the kernel to be used in the convolution operation.
-- **Padding** *(integer, default=(0,0))*: The image padding to be used for the network.
-- **Stride** *(integer, default=(1,1))*: The stride to be used for the convolutional filter.
-- **Dropout** *(float, default=0.0)*: The dropout ratio in the final layer of the network.
-- **Pooling_Layers** *(boolean)*: Determines whether max pooling should be applied to the convolutional layer. If default is chosen the pooling is applied only to the last convolutional layer.
-- **Pooling_Size** *(integer, default=(2,2))*: The size of the of the pooling filter representing the region over which pooling is applied.
-- **Pooling_Stride** *(boolean, default=(2,2))*: The stride for the pooling filter.
-- **Batch_Normalization** *(boolean, default =1)*: Determines whether or not batch normalization must be applied to the convolutional layer. By default, all the convolutional layers will have batch normalization,
-- **Num_Classes** *(integer)*: The number of classes for the classification problem. Please enter 1 if you are dealing with a regression problem
-- **Batch_Size** *(integer)*: Sets the batch size for the model.
+- **Default training parameters** *(boolean, default=None)*: All default training parameters will be used if True.
+- **Number of neurons in each layer** *(integers, default = None)*: Number of neurons to be used in each layer including input layer and output layer. Input layer size must be same as the number of feature for each datapoint. Output layer size must be one for regression problem else must be equal to number of classes.
+- **Activation function for each hidden layer** *(integer, default= 1 (ReLU))*: Numbers corresponding to each activation function. Number of inputs must be equal to number of hidden layers. By default, all the hidden layers will have ReLU activation.
+- **Batchnorm requirement for each hidden layer** *(integer, default=0 (No batchnorm))*: 1 if batchnormalization required for the particular hidden layer else 0. Number of inputs must be equal to number of hidden layers. By default, no hidden layers will have batch normalization.
+- **Dropout** *(float, default=0.0)*: Input must be between 0 and 1 (0 included and 1 excluded). Number of inputs must be equal to number of hidden layers. By default, all the hidden layers will dropout value equal to zero.
+- **Batch_Size** *(integer)*: Sets the batch size for training the model.
 - **Validation set size** *(float, default = 0.2)*: The size of the validation set over which the trained model is to be tested for results.
-- **Loss_Function** *(integer)*: Sets the loss function to be used for the problem.
-- **Optimizer** *(integer, default='Adam')*: Sets the optimizer among 'Adam' and 'SGD'.
+- **Loss_Function** *(integer)*: Sets the loss function to be used for the problem. Input a number corresponding to required loss function.
+- **Optimizer** *(integer, default='Adam')*: Sets the optimizer among 'Adam' and 'SGD'. Input 1 for Adam or 2 for SGD
 - **Learning_rate** *(integer, default=0.001)*: The learning rate to be used when training the network.
 - **Scheduler** *(integer, default=None)*: The learning rate scheduler to be used when training the network.
+- ****StepLR Scheduler**** *(integer, default=None)*: The learning rate scheduler to be used when training the network.
 - **Epochs** *(integer): The number of epochs for which the model is to be trained
 
 Attributes
