@@ -8,7 +8,7 @@ The CNN for image dataset can be used through **CNN2DImage** class. In the packa
 
 For CNN2DImage, the data needs to be in a specific format. Unlike other models, for CNN2DImage, training and validation data needs to be passed in separately in two different folders. In these folders, images needs to be stored in class specific folders. For example, if there are 3 classes, training data folder must contain 3 more folders corresponding to each class. Similar structure is required for validation data.
 
-CNN2dImageModel*(train_data_address, val_data_address, shuffle = True)*
+CNN2dImageModel *(train_data_address, val_data_address, shuffle = True)*
 
 Parameters
 ==========
@@ -37,7 +37,7 @@ The following hyperparameters must be entered to construct the CNN model:
 - **Scheduler** *(integer, default=None)*: The learning rate scheduler to be used when training the network. Input 1 for None, 2 for StepLR and 3 for MultiStepLR scheduler.
 - **Scheduler specific inputs:**
     - **StepLR Scheduler step** *(integer, default=None)*: Number of epochs after which learning rate needs to be changed. Input must be a non-zero and positive number.
-    - **MultiStepLR Milestones** (integers, default=None)*: Number of epochs at which learning rate needs to be changed. Input must be non-zero and positive numbers.
+    - **MultiStepLR Milestones** *(integers, default=None)*: Number of epochs at which learning rate needs to be changed. Input must be non-zero and positive numbers.
     - **Multiplying factor** *(float, default=None)*: Factor by which learning rate to be multiplied. Input must be a non-zero and positive number.
 - **Epochs** *(integer)*: The number of epochs for which the model is to be trained. Input must be a non-zero and positive number.
 
