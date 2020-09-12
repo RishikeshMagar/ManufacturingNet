@@ -52,10 +52,8 @@ After training the model, the following instance data is available:
 - **Validation_Accuracy** *(float)*: The validation accuracy after every epeoch for the model in case of the classification problem.
 - **Epoch Time** *(float)*: The time required in seconds to train every epoch.
 - **confusion_matrix** *(2D array of integers)*: A matrix where the entry in the *i* th row and *j* th column is the number of observations present in group *i* and predicted to be in group *j*. Supported for multilabel classification only.
-- **r2 score** *(float)*: The R2 score for the validation set in case of the regression problem.
 - **Training and validation loss graph**: Displays a 'Loss' vs 'Epoch' graph and saves the same graph in the root directory.
-- **Training and validation accuracy graph**: Displays a 'Accuracy' vs 'Epoch' graph and saves the same graph in the root directory in case of the classification problem..
-- **Validation r2 score graph**: Displays a 'Predictions' vs 'Ground truth' graph and saves the same graph in the root directory in case of the regression problem..
+- **Training and validation accuracy graph**: Displays a 'Accuracy' vs 'Epoch' graph and saves the same graph in the root directory in case of the classification problem.
 
 Methods
 =======
