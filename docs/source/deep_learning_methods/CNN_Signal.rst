@@ -6,7 +6,7 @@ A CNN is a deep learning architecture that is inspired from the human visual cor
 
 The CNN can be used through **CNNModel** class. In the package we have made a distinction between analyzing signal data and the image data. This distinction gives the advantage of using the powerful CNN network with both these type of datasets 
 
-CNNSignal*(attributes=None, labels=None)*
+CNNSignal *(attributes=None, labels=None)*
 
 Parameters
 ==========
@@ -36,7 +36,7 @@ The following hyperparameters must be entered to construct the CNN model:
 - **Scheduler** *(integer, default=None)*: The learning rate scheduler to be used when training the network. Input 1 for None, 2 for StepLR and 3 for MultiStepLR scheduler.
 - **Scheduler specific inputs:**
     - **StepLR Scheduler step** *(integer, default=None)*: Number of epochs after which learning rate needs to be changed. Input must be a non-zero and positive number.
-    - **MultiStepLR Milestones** (integers, default=None)*: Number of epochs at which learning rate needs to be changed. Input must be non-zero and positive numbers.
+    - **MultiStepLR Milestones** *(integers, default=None)*: Number of epochs at which learning rate needs to be changed. Input must be non-zero and positive numbers.
     - **Multiplying factor** *(float, default=None)*: Factor by which learning rate to be multiplied. Input must be a non-zero and positive number.
 - **Epochs** *(integer)*: The number of epochs for which the model is to be trained. Input must be a non-zero and positive number.
 Attributes
