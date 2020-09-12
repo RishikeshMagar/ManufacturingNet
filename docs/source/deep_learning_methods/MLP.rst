@@ -2,9 +2,9 @@
 DNN - Deep fully connected Neural Network
 *******
 
-Deep Neural Network is also known as Fully Connected Neural Net or Multi Layer Perceptron (MLP). A DNN is a deep learning architecture which is mostly widely used for regression as well as classification problems.  DNN is capable of learning any mapping function and have been proven to be a universal approximation algorithm.
+Deep Neural Network is also known as Fully Connected Neural Net or Multi Layer Perceptron (MLP). DNN is a deep learning architecture which is widely used for regression as well as classification problems.  DNN is capable of learning any mapping function and have been proven to be a universal approximation algorithm.
 
-The CNN can be used through **DNNModel** class.
+The DNN can be used through **DNNModel** class.
 
 DNNModel*(attributes=None, labels=None, shuffle=True)*
 
@@ -32,7 +32,7 @@ The following quenstions and hyperparameters must be entered to construct the DN
 - **Scheduler specific inputs:**
     - **StepLR Scheduler step** *(integer, default=None)*: Number of epochs after which learning rate needs to be changed. Input must be a non-zero and positive number.
     - **MultiStepLR Milestones** (integers, default=None)*: Number of epochs at which learning rate needs to be changed. Input must be non-zero and positive numbers.
-    - **Multiplying factor** *(flaot, default=None)*: Factor by which learning rate to be multiplied. Input must be a non-zero and positive.
+    - **Multiplying factor** *(flaot, default=None)*: Factor by which learning rate to be multiplied. Input must be a non-zero and positive number.
 - **Epochs** *(integer): The number of epochs for which the model is to be trained. Input must be a non-zero and positive number.
 
 Attributes
@@ -54,7 +54,8 @@ After training the model, the following instance data is available:
 Methods
 =======
 
-- **get_predict(dataset_X=None)**: Uses the trained model to do predictions on a completely new data. A batch of datapoints can also be passed.
+- **get_predict(dataset_X=None)**: Uses the trained model to do predictions on a completely new data. A batch of datapoints can also be passed. The format must be same as input data (test data batch size, features).
+
 
 Example Usage
 =============
