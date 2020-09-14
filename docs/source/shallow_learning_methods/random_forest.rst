@@ -94,6 +94,7 @@ After run_classifier() successfully trains the classifier model, the following i
 - **roc_auc** *(float)*: The area under the receiver operating characteristic (ROC) curve from the prediction scores. Supported for binary classification only.
 - **confusion_matrix** *(2D array of integers)*: A matrix where the entry in the *i* th row and *j* th column is the number of observations present in group *i* and predicted to be in group *j*. Supported for multilabel classification only.
 - **cross_val_scores_classifier** *(array of floats)*: An array of the cross validation scores for the classifier model.
+- **feature_importances_classifier** *(array of floats)*: An array of the feature importances for the classifier model. The higher the score, the more useful the feature is for prediction.
 
 Classifier Methods
 ------------------
@@ -109,6 +110,7 @@ Classifier Accessor Methods
 - **get_roc_auc()**: Returns roc_auc.
 - **get_confusion_matrix()**: Returns confusion_matrix.
 - **get_cross_val_scores_classifier()**: Returns cross_val_scores_classifier.
+- **get_feature_importances_classifier()**: Returns feature_importances_classifier.
 
 Note: If run_classifier() hasn't successfully executed yet, the above accessor methods will return None.
 
@@ -156,6 +158,7 @@ After run_regressor() successfully trains the regressor model, the following ins
 - **r_score** *(float)*: The correlation coefficient for the regressor model.
 - **r2_score** *(float)*: The coefficient of determination for the regressor model.
 - **cross_val_scores_regressor** *(array of floats)*: An array of the cross validation scores for the regressor model.
+- **feature_importances_regressor** *(array of floats)*: An array of the feature importances for the regressor model. The higher the score, the more useful the feature is for prediction.
 
 Regressor Methods
 -----------------
@@ -171,6 +174,7 @@ Regressor Accessor Methods
 - **get_r_score()**: Returns r_score.
 - **get_r2_score()**: Returns r2_score.
 - **get_cross_val_scores_regressor()**: Returns get_cross_val_scores_regressor.
+- **get_feature_importances_regressor()**: Returns feature_importances_regressor.
 
 Note: If run_regressor() hasn't successfully executed yet, the above accessor methods will return None.
 

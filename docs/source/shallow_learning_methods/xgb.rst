@@ -93,6 +93,7 @@ After run_classifier() successfully trains the classification model, the followi
 - **roc_auc** *(float)*: The area under the receiver operating characteristic (ROC) curve from the prediction scores. Supported for binary classification only.
 - **classes** *(array of multiple possible types)*: An array of the known class labels.
 - **cross_val_scores_classifier** *(array of floats)*: An array of the cross validation scores for the classifier model.
+- **feature_importances_classifier** *(array of floats)*: An array of the feature importances for the classifier model. The higher the score, the more useful the feature is for prediction.
 
 Classifier Methods
 ------------------
@@ -113,6 +114,7 @@ Classifier Accessor Methods
 - **get_roc_auc()**: Returns roc_auc.
 - **get_classes()**: Returns classes.
 - **get_cross_val_scores_classifier()**: Returns cross_val_scores_classifier.
+- **get_feature_importances_classifier()**: Returns feature_importances_classifier.
 
 Note: If run_classifier() hasn't successfully executed yet, the above accessor methods will return None.
 
@@ -153,6 +155,7 @@ After run_regressor() successfully trains the classification model, the followin
 - **r_score** *(float)*: The correlation coefficient for the regressor model.
 - **r2_score** *(float)*: The coefficient of determination for the regressor model.
 - **cross_val_scores_regressor** *(array of floats)*: An array of the cross validation scores for the regressor model.
+- **feature_importances_regressor** *(array of floats)*: An array of the feature importances for the regressor model. The higher the score, the more useful the feature is for prediction.
 
 Regressor Methods
 -----------------
@@ -168,6 +171,7 @@ Regressor Accessor Methods
 - **get_r_score()**: Returns r_score.
 - **get_r2_score()**: Returns r2_score.
 - **get_cross_val_scores_regressor()**: Returns cross_val_scores_regressor.
+- **get_feature_importances_regressor()**: Returns feature_importances_regressor.
 
 Regressor Example Usage
 -----------------------
