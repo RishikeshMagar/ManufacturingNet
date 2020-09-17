@@ -26,6 +26,7 @@ Table of Contents
       Getting Started <tutorial>
       Datasets <datasets>
       Featurizers <featurizers>
+      Preprocessing <preprocessing>
       Shallow Learning Methods <shallow_learning_methods>
       Deep Learning Methods <deep_learning_methods>
       License <license>
