@@ -6,7 +6,7 @@ Preprocessing is a module for doing some pre-processing steps to the data attrib
 
 **MeanNormalizer**:
 
- This class performs normalizaation of the data along the given axis. It calculates the mean and standard deviation along the axis.
+ This class performs normalization of the data along the given axis. It calculates the mean and standard deviation along the axis.
  It subtracts the mean and divides by the standard deviation. This transformation sets the mean of data to 0 and the standard deviation to 1
 
 The MeanNormalizer class can be used as follows:

@@ -41,12 +41,12 @@ Example Usage
     from ManufacturingNet.Featurization import Featurizer
     import numpy as np
     
-    data = np.load('CWRU_raw_data.npy, allow_pickle = True)
+    data = np.load("CWRU_raw_data.npy, allow_pickle=True")
     
     f = Featurizer()
     
-    """Using above instance extract features"""
+    # Using above instance extract features
     
-    Mean = f.mean(data, axis = 1)
-    Median = f.median(data, axis = 1)
-    Min = f.min(data, axis = 1)
+    mean = f.mean(data, axis=1)
+    median = f.median(data, axis=1)
+    min = f.min(data, axis=1)
