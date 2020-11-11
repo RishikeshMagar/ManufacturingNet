@@ -5,9 +5,9 @@ Convolutional Long Short Term Memory (CNN-LSTM)
 Convolutional Long Short Term Memory (CNN-LSTM) architecture consists of a convolution neural network connected to an LSTM network. CNN-LSTM networks were primarily developed for visual time series predictions. It uses inputs like sequential images or videos. Common problems that use CNN-LSTM are activity recognition, video classification, video captioning.
 The CNN part of the network is for feature extraction from input data. The LSTM supports the sequential relation between inputs to predict. 
 
-The CNNLSTM can be used through **CNNLSTMModel** class.
+The CNNLSTM can be used through **CNNLSTM** class.
 
-CNNLSTMModel *(attributes=None, labels=None)*
+CNNLSTM *(attributes=None, labels=None)*
 
 Parameters
 ==========
@@ -72,10 +72,10 @@ Example Usage
 .. code-block:: python
     :linenos:
 
-    from ManufacturingNet.deep_learning_methods import CNNLSTMModel
+    from ManufacturingNet.models import CNNLSTM
     import numpy as np
 
     attributes = np.load('lithography_x.npy', allow_pickle = True)
     labels = np.load("lithography_y.npy", allow_pickle = True)
     
-    model = CNNLSTMModel(attributes, labels)
+    model = CNNLSTM(attributes, labels)
