@@ -12,7 +12,7 @@ CNNLSTM *(attributes=None, labels=None)*
 Parameters
 ==========
 
-When initializing a CNNLSTMModel object, the following parameters need to be passed:
+When initializing a CNNLSTM object, the following parameters need to be passed:
 
 - **attributes** *(numpy array, default=None)*: A numpy array of the signal reshaped as a 2D array. The input shape must be in the form (total number of data points, sequence length, num_channels, height, width).
 - **labels** *(numpy array, default=None)*: A numpy array of the class labels.
