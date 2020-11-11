@@ -11,12 +11,12 @@ CNN2DSignal *(attributes=None, labels=None)*
 Parameters
 ==========
 
-When initializing a CNN object, the following parameters need to be passed:
+When initializing a CNN2DSignal object, the following parameters need to be passed:
 
 - **attributes** *(numpy array, default=None)*: A numpy array of the signal reshaped as a 2D array. The input shape must be in the form (total number of data points, num_channels, height, width).
 - **labels** *(numpy array, default=None)*: A numpy array of the class labels.
 
-The following hyperparameters must be entered to construct the CNN model:
+The following hyperparameters must be entered to construct the CNN2DSignal model:
 
 - **Number_of_Convolutions** *(integer, default=None)*: The number of convolutional layers to be used in the network.
 - **kernel_size** *(integer, default = (3,3))*: The size of the kernel to be used in the convolution operation.
