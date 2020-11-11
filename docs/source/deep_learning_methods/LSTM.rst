@@ -6,12 +6,12 @@ LSTM is a type of Recurrent Neural Network (RNN). LSTM networks are mainly devis
 The LSTM can be used through **LSTM** class.
 The LSTM model always operates with batch size dimension being the first dimension(batch_first = True).
 
-LSTMModel *(attributes=None, labels=None, shuffle=True)*
+LSTM *(attributes=None, labels=None, shuffle=True)*
 
 Parameters
 ==========
 
-When initializing a LSTMModel object, the following parameters need to be passed:
+When initializing a LSTM object, the following parameters need to be passed:
 
 - **attributes** *(numpy array, default=None)*: A numpy array of the signal reshaped as a 3D array. The input shape must be in the form (total number of data points, sequence length, number of input feature).
 - **labels** *(numpy array, default=None)*: A numpy array of the class labels for classification problem or numbers for regression problem. The input shape for labels must be in the form (total number of data points, labels)
