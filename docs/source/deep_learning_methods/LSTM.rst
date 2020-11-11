@@ -3,7 +3,7 @@ Long Short Term Memory Networks (LSTMs)
 **********
 LSTM is a type of Recurrent Neural Network (RNN). LSTM networks are mainly devised for classifying and making predictions based on time series data. Examples of time series data are daily weather data, stock market data, speech data.
 
-The LSTM can be used through **LSTMModel** class.
+The LSTM can be used through **LSTM** class.
 The LSTM model always operates with batch size dimension being the first dimension(batch_first = True).
 
 LSTMModel *(attributes=None, labels=None, shuffle=True)*
@@ -63,10 +63,10 @@ Example Usage
 .. code-block:: python
     :linenos:
 
-    from ManufacturingNet.deep_learning_methods import LSTMModel
+    from ManufacturingNet.models import LSTM
     import numpy as np
 
     attributes = np.load('lstm_train_x.npy', allow_pickle = True)
     labels = np.load("lstm_train_y.npy", allow_pickle = True)
     
-    model = LSTMModel(attributes, labels)
+    model = LSTM(attributes, labels)
