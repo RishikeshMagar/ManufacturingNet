@@ -8,12 +8,12 @@ The CNN for image dataset can be used through **CNN2DImage** class. In the packa
 
 For CNN2DImage, the data needs to be in a specific format. Unlike other models, for CNN2DImage, training and validation data needs to be passed in separately in two different folders. In these folders, images needs to be stored in class specific folders. For example, if there are 3 classes, training data folder must contain 3 more folders corresponding to each class. Similar structure is required for validation data.
 
-CNN2dImageModel *(train_data_address, val_data_address, shuffle = True)*
+CNN2dImage *(train_data_address, val_data_address, shuffle = True)*
 
 Parameters
 ==========
 
-When initializing a CNN2dImageModel object, the following parameters need to be passed:
+When initializing a CNN2dImage object, the following parameters need to be passed:
 
 - **train_data_address** *(training data folder address, default=None)*: Training data folder address input in string format. 
 - **val_data_address** *(validation data folder address, default=None)*: Validation data folder address input in string format. 
