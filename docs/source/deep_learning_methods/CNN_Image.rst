@@ -72,4 +72,4 @@ Example Usage
     
     train_data_address = train_data_g/
     val_data_address = val_data_g/
-    model = CNN2DImageModel(train_data_address, val_data_address)
+    model = CNN2DImage(train_data_address, val_data_address)
