@@ -1,17 +1,17 @@
 *******
-DNN - Deep Neural Network
+Deep Neural Network - DNN
 *******
 
-Deep Neural Network is also known as Fully Connected Neural Net or Multi Layer Perceptron (MLP). DNN is a deep learning architecture which is widely used for regression as well as classification problems.  DNN is capable of learning any mapping function and have been proven to be a universal approximation algorithm.
+Deep Neural Network also known as Fully Connected Neural Net or Multi Layer Perceptron (MLP). DNN is a deep learning architecture which is widely used for regression as well as classification problems.  DNN is capable of learning any mapping function and have been proven to be a universal approximation algorithm.
 
-The DNN can be used through **DNNModel** class.
+The Deep Neural Network can be used through **DNN** class.
 
-DNNModel *(attributes=None, labels=None, shuffle=True)*
+DNN *(attributes=None, labels=None, shuffle=True)*
 
 Parameters
 ==========
 
-When initializing a DNNModel object, the following parameters need to be passed:
+When initializing a DNN object, the following parameters need to be passed:
 
 - **attributes** *(numpy array, default=None)*: A numpy array of the features as a 2D array. The input shape must be in the form (total number of data points, Features).
 - **labels** *(numpy array, default=None)*: A numpy array of the class labels for classification problem or numbers for regression problem. The input shape for labels must be in the form (total number of data points, labels)
@@ -63,10 +63,10 @@ Example Usage
 .. code-block:: python
     :linenos:
 
-    from ManufacturingNet.deep_learning_methods import DNNModel
+    from ManufacturingNet.models import DNN
     import numpy as np
 
     attributes = np.load('cwru_feature.npy', allow_pickle = True)
     labels = np.load("cwru_labels.npy", allow_pickle = True)
     
-    model = DNNModel(attributes, labels)
+    model = DNN(attributes, labels)
