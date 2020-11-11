@@ -67,7 +67,7 @@ Example Usage
 .. code-block:: python
     :linenos:
 
-    from ManufacturingNet.models import CNN2DImageModel
+    from ManufacturingNet.models import CNN2DImage
     import numpy as np
     
     train_data_address = train_data_g/
